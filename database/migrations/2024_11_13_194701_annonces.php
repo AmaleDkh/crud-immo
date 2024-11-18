@@ -25,10 +25,10 @@ return new class () extends Migration {
             $table->integer("nombre_de_piece");
             $table->timestamps();
 
-            // Clé étrangère permettant de lier une annonce immobilière à un agent immobilier
+            // Foreign key to link a real estate ad to a real estate agent
             $table->unsignedBigInteger("agent_immobilier_id");
 
-            // Définition de la clé étrangère permattant de faire référence à un agent immobilier
+            // Definition of the foreign key used to refer to a real estate agent
             $table->foreign("agent_immobilier_id")->references("id")->on("agent_immobiliers")->onDelete("cascade");
         });
     }

@@ -1,21 +1,34 @@
-## Installation
+# Introduction
 
-**Required**: XAMPP, Composer, Node
+This project is an application that enables real estate agents to create and manage real estate ads.
 
-**npm install**
+# Project installation
 
-**composer run dev**
+## Required
 
-Sample to create a migration:
+-   XAMPP
+-   Composer
+-   Node.js
 
-php artisan make:migration migration-name
+## Installation steps
 
-Run the migrations:
+`npm install`
+`composer install`
 
-php artisan migrate
+# Project running
 
-Drop database:
+`composer run dev`
 
-php artisan db:wipe
+# Useful commands
 
-## Learning Laravel
+## Sample to create a migration:
+
+`php artisan make:migration migration-name`
+
+## Run the migrations:
+
+`php artisan migrate`
+
+## Drop database:
+
+`php artisan db:wipe`

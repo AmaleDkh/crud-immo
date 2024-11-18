@@ -3,23 +3,23 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AnnonceController;
 
-// Récupérer toutes les annonces
+// Get all real estate ads
 Route::get('/', AnnonceController::class .'@index')->name('annonces.index');
 
-// Renvoyer un formulaire d'ajout d'annonce
+// Send an ad form
 Route::get('/annonces/create', AnnonceController::class . '@create')->name('annonces.create');
 
-// Ajouter une annonce à la base de données
+// Add an ad to the database
 Route::post('/annonces', AnnonceController::class .'@store')->name('annonces.store');
 
-// Récupérer une annonce
+// Get a real estate ad
 Route::get('/annonces/{annonce}', AnnonceController::class .'@show')->name('annonces.show');
 
-// Renvoyer un formulaire d'édition d'annonce
+// Send an editing ad form
 Route::get('/annonces/{annonce}/edit', AnnonceController::class .'@edit')->name('annonces.edit');
 
-// Mettre à jour une annonce
+// Update an ad
 Route::put('/annonces/{annonce}', AnnonceController::class .'@update')->name('annonces.update');
 
-// Supprimer une annonce
+// Delete an ad
 Route::delete('/annonces/{annonce}', AnnonceController::class .'@destroy')->name('annonces.destroy');

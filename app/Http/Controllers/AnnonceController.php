@@ -17,13 +17,13 @@ class AnnonceController extends Controller
         $prixOrder = 'desc';
         $surfaceOrder = 'desc';
     
-        // Filtrer par prix (du plus bas au plus élevé)
+        // Filter by price
         if ($request->has('prix_annonce')) {
             $prixOrder = $request->prix_annonce;
             $query->orderBy('prix_annonce', $prixOrder);
         }
     
-        // Filtrer par surface (du plus petit au plus grand)
+        // Filter by surface
         if ($request->has('surface_habitable')) {
             $surfaceOrder = $request->surface_habitable;
             $query->orderBy('surface_habitable', $surfaceOrder);
